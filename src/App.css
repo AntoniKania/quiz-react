@@ -1,0 +1,39 @@
+* {
+  font-family: 'Didot ', sans-serif;
+  font-size: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+html,
+body,
+#app,
+#app>div {
+  height: 100%;
+  background-color: rgb(146, 237, 196);
+}
+
+.link {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none
+}
+
+button {
+  width: 120px;
+  padding: 10px;
+  background-color: rgb(179, 87, 233);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.4);
+  margin: 10px;
+}
+
+button:hover {
+  background-color: rgb(159, 89, 200);
+}

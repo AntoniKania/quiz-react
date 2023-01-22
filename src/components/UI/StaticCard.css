@@ -1,0 +1,44 @@
+.static-card {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.static-card .progress-bar {
+    position: relative;
+    left: 0px;
+}
+
+.static-card form {
+    flex-grow: 1;
+}
+
+.static-card .single-choice-question-form {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    align-items: center;
+    text-align: center;
+}
+
+.static-card .control-group {
+    justify-self: flex-end;
+    display: flex;
+    gap: 15px
+}
+
+.answers {
+    justify-self: center;
+    flex-grow: 1;
+}

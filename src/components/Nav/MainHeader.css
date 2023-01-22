@@ -1,0 +1,34 @@
+nav {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.3);
+  margin-bottom: 150px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+nav .link {
+  color: rgb(255, 255, 255);
+}
+
+nav .active-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+nav .link:hover {
+  color: rgb(208, 208, 208);
+}
+
+.logo {
+  justify-self: flex-start;
+  align-self: flex-start;
+}

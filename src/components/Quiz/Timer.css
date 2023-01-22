@@ -1,0 +1,41 @@
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  width: 0%
+}
+
+.progress-bar.active {
+  align-self: flex-start;
+  color: red;
+  width: 100%;
+  border-radius: 3px;
+  height: 6px;
+  animation: progress var(--time) linear forwards;
+  margin-bottom: 5px;
+
+}
+
+@keyframes progress {
+  0% {
+    width: 100%;
+    background-color: rgb(32, 160, 174);
+  }
+
+  70% {
+    width: 30%;
+    background-color: rgb(32, 160, 174);
+  }
+
+  100% {
+    width: 0%;
+    background-color: red;
+  }
+}

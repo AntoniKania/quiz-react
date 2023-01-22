@@ -1,0 +1,11 @@
+.new-quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.new-quiz button {
+  align-self: center;
+  margin-bottom: 20px;
+  width: 200px;
+}
