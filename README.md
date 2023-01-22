@@ -16,3 +16,9 @@ A quiz application built using the React framework that allows users to play qui
 
 ## Built With
 * [React](http://reactjs.org) - JavaScript library for building user interfaces
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/87483058/213923165-a908221b-815c-45b1-937b-c08d07f62788.png)
+
+![image](https://user-images.githubusercontent.com/87483058/213923362-aa9e98b3-70a3-406c-8aba-536dde41238b.png)
