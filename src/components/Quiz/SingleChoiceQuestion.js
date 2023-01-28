@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import QuizzesContext from "../../store/QuizzesContext";
+import "./SingleChoiceQuestion.css";
 
 function SingleChoiceQuestion({
   id,
@@ -19,15 +20,19 @@ function SingleChoiceQuestion({
       <h1>{quizzes[id].questions[currentIndex].query}</h1>
       <div className="answers">
         {quizzes[id].questions[currentIndex].answers.map((answer, a) => (
-          <div className={"answer" + a} key={a}>
+          <div className={"answer " + a} key={a}>
             <input
               key={answer.content}
               type="radio"
               name="answer"
+              className="radio-button"
               value={JSON.stringify(answer)}
               {...register("answer")}
             />
-            <label htmlFor={answer.content}>{answer.content}</label> <br />
+            <label htmlFor={answer.content} className="answer-label">
+              {answer.content}
+            </label>{" "}
+            <br />
           </div>
         ))}
       </div>

@@ -37,3 +37,32 @@ button {
 button:hover {
   background-color: rgb(159, 89, 200);
 }
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  margin-right: 10px;
+  font: inherit;
+  color: red;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid black;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  background-color: rgb(164, 85, 210);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 100ms transform ease-in-out;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
