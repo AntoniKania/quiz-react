@@ -11,5 +11,14 @@
   min-width: 200px;
   padding: 15px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+.single-choice-question-form {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr;
+  align-items: center;
+  text-align: center;
 }

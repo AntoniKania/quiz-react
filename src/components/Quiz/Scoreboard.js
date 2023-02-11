@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Table from "../UI/Table";
 import ResultContext from "../../store/ResultsContext";
 import UserContext from "../../store/UserContext";
-import "./Scoreboard.css";
+import styles from "./Scoreboard.module.css";
 
 function compareScores(a, b) {
   if (a.score > b.score) return -1;
@@ -12,8 +12,8 @@ function compareScores(a, b) {
 
 function Storeboard(props) {
   const { results } = useContext(ResultContext);
-  const id = Number(props.id);
   const { user } = useContext(UserContext);
+  const id = Number(props.id);
 
   return (
     <Table>
@@ -39,7 +39,7 @@ function Storeboard(props) {
       {results
         .filter((result) => result.quizId === Number(id))
         .findIndex((result) => result.username === user) >= 0 && (
-        <div className="players-place">
+        <div className={styles["players-place"]}>
           <span>Twoje miejsce w tabeli:</span>
           <p>
             {results

@@ -1,12 +1,12 @@
-import "./Popup.css";
+import styles from "./Popup.module.css";
 
 function Popup(props) {
   if (!props.triggered) {
     return null;
   }
   return (
-    <div className="popup">
-      <div className="popup-inner">{props.children}</div>
+    <div className={styles.popup}>
+      <div className={styles["popup-inner"]}>{props.children}</div>
     </div>
   );
 }

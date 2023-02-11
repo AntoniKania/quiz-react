@@ -33,7 +33,7 @@ const DEFAULT_QUIZZES = [
     negativePoints: false,
     randomOrderQuestions: false,
     randomOrderAnswers: false,
-    timePerQuestion: 2000,
+    timePerQuestion: 200,
     creationDate: Date.now(),
     author: "Kasia",
     questions: [

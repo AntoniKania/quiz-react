@@ -1,7 +1,7 @@
-import "./StaticCard.css";
+import styles from "./StaticCard.module.css";
 
 const Card = (props) => {
-  const classes = "static-card " + props.className;
+  const classes = `${styles["static-card"]} + ${props.className}`;
 
   return <div className={classes}>{props.children}</div>;
 };

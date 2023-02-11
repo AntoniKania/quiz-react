@@ -18,9 +18,8 @@
   width: 100%;
   border-radius: 3px;
   height: 6px;
-  animation: progress var(--time) linear forwards;
   margin-bottom: 5px;
-
+  animation: progress var(--time) linear forwards;
 }
 
 @keyframes progress {

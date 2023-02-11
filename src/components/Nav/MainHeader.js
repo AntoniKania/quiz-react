@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UserContext from "../../store/UserContext";
-import "./MainHeader.css";
+import styles from "./MainHeader.module.css";
+
 function MainHeader({ isLoggedIn, setIsLoggedIn }) {
   const { user } = useContext(UserContext);
   return (
@@ -14,7 +15,9 @@ function MainHeader({ isLoggedIn, setIsLoggedIn }) {
           <li>
             <NavLink
               id="quizzes-link"
-              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              className={({ isActive }) =>
+                isActive ? `${styles["active-link"]}` : `${styles.link}`
+              }
               to="/quizzes"
             >
               Quizzes
@@ -23,7 +26,9 @@ function MainHeader({ isLoggedIn, setIsLoggedIn }) {
           <li>
             <NavLink
               id="create-quiz-link"
-              className={({ isActive }) => (isActive ? "active-link" : "link")}
+              className={({ isActive }) =>
+                isActive ? `${styles["active-link"]}` : `${styles.link}`
+              }
               to="/create-quiz"
             >
               Create Quiz

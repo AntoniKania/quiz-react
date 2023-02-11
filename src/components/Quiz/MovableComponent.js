@@ -1,11 +1,11 @@
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
-import "./MovableComponent.css";
+import styles from "./MovableComponent.module.css";
 
 function MovableComponent(props) {
   return (
-    <div className="component">
-      <div className="content">{props.content}</div>
-      <div className="component-control">
+    <div className={styles.component}>
+      <div className={styles.content}>{props.content}</div>
+      <div className={styles["component-control"]}>
         <button type="button" onClick={() => props.moveUp(props.index)}>
           <SlArrowUp />
         </button>

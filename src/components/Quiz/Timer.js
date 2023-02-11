@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import "./Timer.css";
+import { useState, useEffect } from "react";
+import styles from "./Timer.module.css";
 
 function Timer({ outOfTime, time, currentIndex }) {
   const [timer, setTimer] = useState(10);
-  const progressBar = useRef(null);
 
   function formatTime(time) {
     const minutes = Math.floor(time / 60);
@@ -18,7 +17,6 @@ function Timer({ outOfTime, time, currentIndex }) {
 
   useEffect(() => {
     if (timer === 0) return outOfTime(true);
-    progressBar.current.classList.add("active");
     const interval = setInterval(() => {
       setTimer((prevVal) => prevVal - 1);
     }, 1000);
@@ -27,16 +25,13 @@ function Timer({ outOfTime, time, currentIndex }) {
   }, [timer]);
 
   useEffect(() => {
-    progressBar.current.classList.add("active");
-
     setTimer(time);
   }, [currentIndex, outOfTime]);
 
   return (
     <>
       <div
-        className="progress-bar"
-        ref={progressBar}
+        className={`${styles["progress-bar"]} ${styles.active}`}
         style={{ "--time": time + "s" }}
       ></div>
       <div className="timer">

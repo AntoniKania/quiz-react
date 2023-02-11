@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import QuizzesContext from "../../store/QuizzesContext";
 import UserContext from "../../store/UserContext";
 import StaticCard from "../UI/StaticCard";
-import "./NewQuiz.css";
+import styles from "./NewQuiz.module.css";
 
 const answers = [
   { id: 0, content: "", isCorrect: false },
@@ -89,9 +89,9 @@ function NewQuiz() {
   }
 
   return (
-    <StaticCard className="new-quiz">
+    <StaticCard className={styles["new-quiz"]}>
       <form
-        className="new-quiz"
+        className={styles["new-quiz"]}
         onSubmit={handleSubmit(quizOptionsSubmitHandler)}
       >
         <h1>{newQuiz.name}</h1>

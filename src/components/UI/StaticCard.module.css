@@ -23,21 +23,6 @@
     flex-grow: 1;
 }
 
-.static-card .single-choice-question-form {
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
-    align-items: center;
-    text-align: center;
-}
-
-.static-card .control-group {
-    justify-self: flex-end;
-    display: flex;
-    gap: 15px
-}
-
 .answers {
     justify-self: center;
     flex-grow: 1;

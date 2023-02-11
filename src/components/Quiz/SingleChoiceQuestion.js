@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import QuizzesContext from "../../store/QuizzesContext";
-import "./SingleChoiceQuestion.css";
+import styles from "./SingleChoiceQuestion.module.css";
 
 function SingleChoiceQuestion({
   id,
@@ -14,13 +14,13 @@ function SingleChoiceQuestion({
 
   return (
     <form
-      className="single-choice-question-form"
+      className={styles["single-choice-question-form"]}
       onSubmit={handleSubmit(nextQuestionHandler)}
     >
       <h1>{quizzes[id].questions[currentIndex].query}</h1>
-      <div className="answers">
+      <div className={styles.answers}>
         {quizzes[id].questions[currentIndex].answers.map((answer, a) => (
-          <div className={"answer " + a} key={a}>
+          <div className={styles.answer} key={a}>
             <input
               key={answer.content}
               type="radio"

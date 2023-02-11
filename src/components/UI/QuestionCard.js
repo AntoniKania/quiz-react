@@ -1,7 +1,7 @@
-import "./StaticCard.css";
 import QuizzesContext from "../../store/QuizzesContext";
 import { useContext } from "react";
 import StaticCard from "./StaticCard";
+import styles from "./QuestionCard.module.css";
 
 const QuestionCard = (props) => {
   const { quizzes } = useContext(QuizzesContext);
@@ -9,7 +9,7 @@ const QuestionCard = (props) => {
   return (
     <StaticCard>
       {props.children}
-      <div className="control-group">
+      <div className={styles["control-group"]}>
         {quizzes[props.id].canGoBack && !props.isFirstQuestion() && (
           <button type="button" onClick={props.previousQuestionHandler}>
             Previous Question

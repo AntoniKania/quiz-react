@@ -1,7 +1,7 @@
-import "./Table.css";
+import styles from "./Table.module.css";
 
 const Table = (props) => {
-  const classes = "table-card " + props.className;
+  const classes = `${styles.card} + ${props.className}`;
 
   return (
     <div className={classes} id={props.id} onClick={props.onClick}>

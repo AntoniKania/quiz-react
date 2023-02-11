@@ -2,7 +2,7 @@ import Card from "../UI/Card";
 import React, { useContext } from "react";
 import QuizzesContext from "../../store/QuizzesContext";
 import { Link } from "react-router-dom";
-import "./QuizList.css";
+import styles from "./QuizList.module.css";
 
 function QuizList() {
   const { quizzes } = useContext(QuizzesContext);
@@ -12,7 +12,7 @@ function QuizList() {
       <ul>
         <li>
           <Card
-            className="quiz-list"
+            className={styles["quiz-list"]}
             key={quiz.id}
             id={quiz.id}
             onClick={playQuizHandler}
