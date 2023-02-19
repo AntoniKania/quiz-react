@@ -1,5 +1,5 @@
 import QuizList from "./components/Quiz/QuizList";
-import NewQuiz from "./components/Quiz/NewQuiz";
+import NewQuiz from "./components/QuizCreator/CreateQuiz";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { useReducer, useState } from "react";
 import StartQuiz from "./components/Quiz/StartQuiz";

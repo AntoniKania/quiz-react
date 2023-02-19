@@ -1,12 +1,17 @@
 import Card from "../UI/Card";
 import React, { useContext } from "react";
 import QuizzesContext from "../../store/QuizzesContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./QuizList.module.css";
 
 function QuizList() {
   const { quizzes } = useContext(QuizzesContext);
-  function playQuizHandler(input) {}
+  const navigate = useNavigate();
+
+  function playQuizHandler(quizId) {
+    navigate(`/quizzes/${quizId}`);
+  }
+
   return quizzes.map((quiz) => {
     return (
       <ul>
@@ -15,9 +20,9 @@ function QuizList() {
             className={styles["quiz-list"]}
             key={quiz.id}
             id={quiz.id}
-            onClick={playQuizHandler}
+            onClick={() => playQuizHandler(quiz.id)}
           >
-            {console.log(quiz)}
+            {console.log(quizzes)}
             <Link className="link" to={"/quizzes/" + quiz.id}>
               <h1>{quiz.name}</h1>
               <p>{quiz.description}</p>

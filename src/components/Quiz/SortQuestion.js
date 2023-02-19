@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import QuizzesContext from "../../store/QuizzesContext";
-import MovableComponent from "./MovableComponent";
+import MovableComponent from "../UI/MovableComponent";
 
 function SortQuestion({ id, currentIndex, submitRef, nextQuestionHandler }) {
   const { quizzes } = useContext(QuizzesContext);

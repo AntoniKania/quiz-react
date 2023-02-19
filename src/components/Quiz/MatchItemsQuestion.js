@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import QuizzesContext from "../../store/QuizzesContext";
-import MovableComponent from "./MovableComponent";
+import MovableComponent from "../UI/MovableComponent";
 import Table from "../UI/Table";
 
 function compareAnswers(a, b) {

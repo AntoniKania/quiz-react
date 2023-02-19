@@ -6,6 +6,7 @@ function Popup(props) {
   }
   return (
     <div className={styles.popup}>
+      <div className={styles.backdrop} />
       <div className={styles["popup-inner"]}>{props.children}</div>
     </div>
   );

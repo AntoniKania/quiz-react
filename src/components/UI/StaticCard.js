@@ -1,9 +1,13 @@
 import styles from "./StaticCard.module.css";
 
-const Card = (props) => {
+const StaticCard = (props) => {
   const classes = `${styles["static-card"]} + ${props.className}`;
 
-  return <div className={classes}>{props.children}</div>;
+  return (
+    <div className={classes} onClick={props.onClick}>
+      {props.children}
+    </div>
+  );
 };
 
-export default Card;
+export default StaticCard;

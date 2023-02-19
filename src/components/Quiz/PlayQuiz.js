@@ -30,12 +30,12 @@ function PlayQuiz() {
   const { quizzes } = useContext(QuizzesContext);
   const { id } = useParams();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [givenAnswers, setGivenAnswers] = useReducer(givenAnswersReducer, []);
+  const [setGivenAnswers] = useReducer(givenAnswersReducer, []);
   const [showResults, setShowResults] = useState(false);
   const [score, setScore] = useState(0);
-  const { results, setResults } = useContext(ResultContext);
-  const submitRef = useRef();
+  const { setResults } = useContext(ResultContext);
   const { user } = useContext(UserContext);
+  const submitRef = useRef();
 
   useEffect(() => {
     //adding to results

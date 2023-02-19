@@ -1,0 +1,9 @@
+.control-group {
+  justify-self: flex-end;
+  display: flex;
+  gap: 15px
+}
+
+button:hover {
+  cursor: pointer;
+}
